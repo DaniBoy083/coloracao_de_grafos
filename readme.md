@@ -145,7 +145,7 @@ Saída esperada no terminal:
 **Pré-requisitos:** Python 3.8+
 
 ```bash
-pip install networkx matplotlib
+pip install -r requirements.txt
 ```
 
 ---
@@ -153,8 +153,10 @@ pip install networkx matplotlib
 ## Execução
 
 ```bash
-# Todos os arquivos devem estar na mesma pasta
-python main.py
+# ir para a pasta src
+cd ./src
+# e depois
+python -m main.py
 ```
 
 O grafo colorido será exibido em janela e salvo como `routemap_grafo.png` no diretório atual.

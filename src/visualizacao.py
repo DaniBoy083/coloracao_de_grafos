@@ -1,6 +1,14 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import networkx as nx
+from pathlib import Path
+
+OUTPUT_DIR = Path(__file__).parent.parent / "output"
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+arquivo_saida = OUTPUT_DIR / "routemap_grafo.png"
+
+plt.savefig(arquivo_saida)
 
 
 PALETA = ["#E63946", "#2A9D8F", "#E9C46A", "#264653", "#F4A261", "#A8DADC"]
@@ -35,6 +43,6 @@ def visualizar(G, coloracao):
     ax.axis("off")
 
     plt.tight_layout()
-    plt.savefig("routemap_grafo.png", dpi=150, bbox_inches="tight")
+    plt.savefig(arquivo_saida, dpi=150, bbox_inches="tight")
     plt.show()
-    print("\n✅ Imagem salva em: routemap_grafo.png")
+    print(f"\n✅ Imagem salva em: {arquivo_saida}")
